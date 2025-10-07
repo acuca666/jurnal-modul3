@@ -6,16 +6,15 @@ use Illuminate\Http\Request;
 
 class DataController extends Controller
 {
-    public function from(){
-        return view('from');
+    public function form(){
+        return view('form');
     }
 
 
     public function proses(Request $request){
         $nama = $request -> input('nama');
-        $umur = $request -> input('umur');
         $alamat = $request -> input('alamat');
 
-        return view('hasil', compact('nama', 'umur', 'alamat'));
+        return view('hasil', compact('nama','alamat'));
     }
 }
